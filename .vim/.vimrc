@@ -29,7 +29,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'project.tar.gz'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
-Bundle 'vim-ruby/vim-ruby'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'altercation/vim-colors-solarized'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -50,6 +51,7 @@ set laststatus=2
 
 set autoindent
 filetype plugin indent on " Enable filetype-specific indenting and plugins
+syntax on
 
 augroup myfiletypes
   " Clear old autocmds in group
@@ -58,5 +60,11 @@ augroup myfiletypes
   autocmd FileType ruby,eruby,yaml,markdown set ai sw=2 sts=2 et
 augroup END
 
+" Airline config
 let g:airline_theme='luna'
+
+" Color theme
+syntax enable
+set background=dark
+colorscheme solarized
 
