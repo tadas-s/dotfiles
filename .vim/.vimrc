@@ -26,11 +26,12 @@ Plugin 'VundleVim/Vundle.vim'
 " Avoid a name conflict with L9
 " Plugin 'user/L9', {'name': 'newL9'}
 
-Plugin 'project.tar.gz'
 Plugin 'bling/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'kien/ctrlp.vim'
+" Plugin 'wikitopian/hardmode' " one day, but not today...
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
