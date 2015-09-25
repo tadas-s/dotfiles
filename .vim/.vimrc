@@ -50,6 +50,7 @@ filetype plugin indent on    " required
 set number
 set laststatus=2
 set backspace=indent,eol,start
+set tabstop=2
 set nowrap
 
 set autoindent
