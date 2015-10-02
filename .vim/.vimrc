@@ -57,6 +57,9 @@ set autoindent
 filetype plugin indent on " Enable filetype-specific indenting and plugins
 syntax on
 
+" jk to leave insert mode
+inoremap jk <ESC>
+
 augroup myfiletypes
   " Clear old autocmds in group
   autocmd!
