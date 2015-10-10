@@ -31,6 +31,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'
+Plugin 'hewo/vim-colorscheme-deepsea'
+Plugin 'dag/vim2hs'
 " Plugin 'wikitopian/hardmode' " one day, but not today...
 
 " All of your Plugins must be added before the following line
@@ -56,6 +58,8 @@ set nowrap
 set autoindent
 filetype plugin indent on " Enable filetype-specific indenting and plugins
 syntax on
+
+set cursorline          " highlight current line
 
 " jk to leave insert mode
 inoremap jk <ESC>
