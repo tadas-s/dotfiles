@@ -3,3 +3,6 @@
 #
 source ~/dotfiles/bash-git-prompt/gitprompt.sh
 GIT_PROMPT_ONLY_IN_REPO=1
+
+# Cows are lovely, but what ansible does with cowsay is bit much.
+export ANSIBLE_NOCOWS=1
