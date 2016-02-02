@@ -10,3 +10,7 @@ export ANSIBLE_NOCOWS=1
 # Some aliases
 alias ve="vagrant exec"
 
+# Moar colors
+if [ "${TERM}" == "xterm" ]; then
+  export TERM=xterm-256color
+fi
