@@ -9,6 +9,8 @@ export ANSIBLE_NOCOWS=1
 
 # Some aliases
 alias ve="vagrant exec"
+alias setclip="xclip -selection c"
+alias getclip="xclip -selection clipboard -o"
 
 # Moar colors
 if [ "${TERM}" == "xterm" ]; then
