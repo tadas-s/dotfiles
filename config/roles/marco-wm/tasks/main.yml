@@ -1,0 +1,17 @@
+---
+
+- name: Configure window keybindings
+  shell: dconf write /org/mate/marco/window-keybindings/{{ item.binding }} "'{{ item.key }}'"
+  with_items:
+    - { binding: maximize, key: "<Primary><Mod4>Up" }
+    - { binding: tile-to-side-e, key: "<Primary><Mod4>Right" }
+    - { binding: tile-to-side-w, key: "<Primary><Mod4>Left" }
+
+
+- name: Configure global keybindings
+  shell: dconf write /org/mate/marco/global-keybindings/{{ item.binding }} "'{{ item.key }}'"
+  with_items:
+    - { binding: switch-to-workspace-1, key: "<Mod4>1" }
+    - { binding: switch-to-workspace-2, key: "<Mod4>2" }
+    - { binding: switch-to-workspace-3, key: "<Mod4>3" }
+    - { binding: switch-to-workspace-4, key: "<Mod4>4" }

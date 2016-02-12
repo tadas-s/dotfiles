@@ -1,0 +1,8 @@
+---
+
+- name: Common config
+  hosts: all
+  roles:
+    - common-packages
+    - postgresql-dev
+    - marco-wm

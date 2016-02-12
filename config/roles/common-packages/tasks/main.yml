@@ -1,0 +1,21 @@
+---
+
+- name: Any updates?
+  become: yes
+  become_user: root
+  apt: upgrade=dist
+
+- name: Install common / misc packages
+  become: yes
+  become_user: root
+  apt: name={{ item }}
+  with_items:
+    - mc
+    - htop
+    - git
+    - bash-completion
+    - strace
+    - gnupg2
+    - vim
+    - build-essential
+    - dconf-cli

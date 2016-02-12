@@ -1,0 +1,25 @@
+---
+
+- name: Install PostgreSQL
+  become: yes
+  become_user: root
+  apt: name={{ item }}
+  with_items:
+    - postgresql-9.3
+    - libpq-dev
+    - postgresql-client
+    - python-psycopg2
+
+- name: Give myself server admin rights
+  become: yes
+  become_user: postgres
+  postgresql_user:
+    name="tadas"
+    role_attr_flags="SUPERUSER,CREATEDB,CREATEROLE,LOGIN"
+
+- name: Install pg_hba.conf
+  become: yes
+  become_user: root
+  template: src=pg_hba.conf.j2 dest=/etc/postgresql/9.3/main/pg_hba.conf owner=postgres group=postgres mode=0640 backup=yes
+  notify:
+    - restart postgresql

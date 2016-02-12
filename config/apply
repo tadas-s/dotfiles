@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [ ! -x "/usr/bin/ansible" ]; then
+    echo "Will install Ansible..."
+    sudo /bin/bash -c "apt-add-repository -y ppa:ansible/ansible && apt-get update && apt-get install -y ansible"
+fi
+
+ansible-playbook -i machines machines.yml --limit `hostname -f` --connection=local
