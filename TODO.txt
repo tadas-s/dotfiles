@@ -1,0 +1,2 @@
+bloody middle button paste:
+xmodmap -e "pointer = 1 25 3"
