@@ -1,0 +1,7 @@
+---
+
+- name: Symlink .gitignore
+  file: src="~/dotfiles/config/roles/git/files/.gitignore" dest="~/.gitignore" state=link
+
+- name: Create .gitconfig
+  template: src=".gitconfig" dest="~/.gitconfig"

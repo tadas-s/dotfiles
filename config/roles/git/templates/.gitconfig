@@ -1,0 +1,10 @@
+[push]
+  default = current
+[user]
+  email = {{ email }}
+  name = Tadas Sasnauskas
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+[alias]
+  amend = commit --amend
