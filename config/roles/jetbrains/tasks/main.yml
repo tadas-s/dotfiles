@@ -1,0 +1,10 @@
+---
+
+- name: Ensure ~/tmp
+  file: dest="~/tmp" state=directory
+
+- name: Download Rubymine
+  get_url: url="http://download.jetbrains.com/ruby/{{ rubymine }}.tar.gz" dest="~/tmp/{{ rubymine }}.tar.gz"
+
+- name: Download Webstorm
+  get_url: url="http://download.jetbrains.com/webstorm/{{ webstorm }}.tar.gz" dest="~/tmp/{{ webstorm }}.tar.gz"
