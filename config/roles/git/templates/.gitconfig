@@ -8,3 +8,7 @@
   editor = vim
 [alias]
   amend = commit --amend
+  ls-untracked = ls-files --others --exclude-standard
+  subs = submodule update --init
+  d = diff
+  dc = diff --cached
