@@ -1,0 +1,28 @@
+---
+
+- name: Add Docker deb key
+  become: yes
+  become_user: root
+  apt_key: keyserver=keyserver.ubuntu.com id=58118E89F3A912897C070ADBF76221572C52609D
+
+- name: Add Docker deb repository
+  become: yes
+  become_user: root
+  apt_repository: repo='deb https://apt.dockerproject.org/repo ubuntu-trusty main' state=present filename='docker'
+
+- name: Install Docker
+  become: yes
+  become_user: root
+  apt: name={{ item }}
+  with_items:
+    - docker-engine
+
+- name: Install docker-compose
+  become: yes
+  become_user: root
+  pip: name=docker-compose umask=0022
+
+- name: Allow myself to use it. Yeah.
+  become: yes
+  become_user: root
+  user: name=tadas groups=docker append=yes

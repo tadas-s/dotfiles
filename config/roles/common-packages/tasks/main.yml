@@ -19,3 +19,4 @@
     - vim
     - build-essential
     - dconf-cli
+    - python-pip
