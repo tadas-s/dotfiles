@@ -1,0 +1,18 @@
+---
+
+- name: Download PyCharm
+  shell: wget {{ jetbrains_pycharm_url }}
+  args:
+    chdir: /tmp
+    creates: /tmp/{{ jetbrains_pycharm_url | basename }}
+
+- name: Download PyCharm checksums
+  shell: wget {{ jetbrains_pycharm_url }}.sha256
+  args:
+    chdir: /tmp
+    creates: /tmp/{{ jetbrains_pycharm_url | basename }}.sha256
+
+- name: Verify download
+  command: sha256sum -c {{ jetbrains_pycharm_url | basename }}.sha256 chdir="/tmp"
+
+# todo: actually install it into home folder...
