@@ -36,6 +36,7 @@ Plugin 'hewo/vim-colorscheme-deepsea'
 Plugin 'dag/vim2hs'
 Plugin 'rust-lang/rust.vim'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'editorconfig/editorconfig-vim'
 " Plugin 'wikitopian/hardmode' " one day, but not today...
 
 " All of your Plugins must be added before the following line
