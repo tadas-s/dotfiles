@@ -1,4 +1,4 @@
-/.vim/bundle/
-!/.vim/bundle/Vundle.vim
+/vim/.vim/bundle/
+!/vim/.vim/bundle/Vundle.vim
 /.idea
 
