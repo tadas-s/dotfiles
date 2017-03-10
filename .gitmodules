@@ -1,9 +1,9 @@
-[submodule "bash-git-prompt"]
-	path = bash-git-prompt
-	url = git@github.com:magicmonty/bash-git-prompt.git
 [submodule "solarized-mate-terminal"]
 	path = solarized-mate-terminal
 	url = git@github.com:oz123/solarized-mate-terminal.git
 [submodule "vim/.vim/bundle/Vundle.vim"]
 	path = vim/.vim/bundle/Vundle.vim
 	url = git@github.com:VundleVim/Vundle.vim.git
+[submodule "bash/bash-git-prompt"]
+	path = bash/bash-git-prompt
+	url = git@github.com:magicmonty/bash-git-prompt.git
