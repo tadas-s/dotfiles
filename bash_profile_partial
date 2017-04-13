@@ -12,7 +12,12 @@ alias ve="vagrant exec"
 alias setclip="xclip -selection c"
 alias getclip="xclip -selection clipboard -o"
 
+if [ -d "${HOME}/vagrant_devbox" ]; then
+  alias vb="cd ${HOME}/vagrant_devbox && vagrant ssh"
+fi
+
 # Moar colors
 if [ "${TERM}" == "xterm" ]; then
   export TERM=xterm-256color
 fi
+
