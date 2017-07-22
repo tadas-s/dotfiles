@@ -2,4 +2,4 @@
 !/vim/.vim/bundle/Vundle.vim
 /.idea
 *.swp
-
+.netrwhist
