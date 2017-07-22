@@ -1,4 +1,15 @@
 ---
+- name: Ensure some packages
+  become: yes
+  become_user: root
+  apt: name={{ item }}
+  with_items:
+    - mint-themes
+    - mate-themes
+
+- name: Set WM theme
+  shell: dconf write /org/mate/marco/general/theme "'TraditionalOk'"
+
 - name: Configure mintmenu hotkey
   shell: dconf write /com/linuxmint/mintmenu/hot-key "'<Super>space'"
 
