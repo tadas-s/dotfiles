@@ -1,0 +1,10 @@
+\set ON_ERROR_ROLLBACK interactive
+\set COMP_KEYWORD_CASE upper
+\set HISTFILE ~/.psql/history- :DBNAME
+
+\pset null '(null)'
+\set PROMPT1 '%[%033[1m%]%M %n@%/%R%[%033[0m%]%# '
+\pset linestyle unicode
+\pset border 1
+\setenv PAGER most
+
