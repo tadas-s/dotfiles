@@ -3,3 +3,5 @@
 /.idea
 *.swp
 .netrwhist
+*.retry
+

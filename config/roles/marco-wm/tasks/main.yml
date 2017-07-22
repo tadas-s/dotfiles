@@ -1,12 +1,13 @@
 ---
+- name: Configure mintmenu hotkey
+  shell: dconf write /com/linuxmint/mintmenu/hot-key "'<Super>space'"
 
 - name: Configure window keybindings
   shell: dconf write /org/mate/marco/window-keybindings/{{ item.binding }} "'{{ item.key }}'"
   with_items:
-    - { binding: maximize, key: "<Primary><Mod4>Up" }
-    - { binding: tile-to-side-e, key: "<Primary><Mod4>Right" }
-    - { binding: tile-to-side-w, key: "<Primary><Mod4>Left" }
-
+    - { binding: maximize, key: "<Mod4>Up" }
+    - { binding: tile-to-side-e, key: "<Mod4>Right" }
+    - { binding: tile-to-side-w, key: "<Mod4>Left" }
 
 - name: Configure global keybindings
   shell: dconf write /org/mate/marco/global-keybindings/{{ item.binding }} "'{{ item.key }}'"
@@ -15,3 +16,4 @@
     - { binding: switch-to-workspace-2, key: "<Mod4>2" }
     - { binding: switch-to-workspace-3, key: "<Mod4>3" }
     - { binding: switch-to-workspace-4, key: "<Mod4>4" }
+

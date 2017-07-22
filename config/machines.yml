@@ -4,7 +4,7 @@
   hosts: all
   roles:
     - common-packages
-    - postgresql-dev
+    # - postgresql-dev
     - marco-wm
     - git
-    - docker
+    # - docker

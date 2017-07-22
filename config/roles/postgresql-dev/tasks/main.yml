@@ -5,7 +5,7 @@
   become_user: root
   apt: name={{ item }}
   with_items:
-    - postgresql-9.3
+    - postgresql-9.5
     - libpq-dev
     - postgresql-client
     - python-psycopg2
@@ -20,6 +20,6 @@
 - name: Install pg_hba.conf
   become: yes
   become_user: root
-  template: src=pg_hba.conf.j2 dest=/etc/postgresql/9.3/main/pg_hba.conf owner=postgres group=postgres mode=0640 backup=yes
+  template: src=pg_hba.conf.j2 dest=/etc/postgresql/9.5/main/pg_hba.conf owner=postgres group=postgres mode=0640 backup=yes
   notify:
     - restart postgresql
