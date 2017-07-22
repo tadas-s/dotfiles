@@ -21,3 +21,11 @@ if [ "${TERM}" == "xterm" ]; then
   export TERM=xterm-256color
 fi
 
+# Virtualenv, if installed/being used
+if [ -f "/usr/local/bin/virtualenvwrapper.sh" ]; then
+	export WORKON_HOME=$HOME/.virtualenvs
+	export PROJECT_HOME=$HOME/src
+	export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages -p python3.4'
+	source /usr/local/bin/virtualenvwrapper.sh
+fi
+
