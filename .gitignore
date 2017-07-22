@@ -1,5 +1,5 @@
-/vim/.vim/bundle/
-!/vim/.vim/bundle/Vundle.vim
+/vim/.local/share/vim/bundle/
+!/vim/.local/share/vim/bundle/Vundle.vim
 /.idea
 *.swp
 .netrwhist
