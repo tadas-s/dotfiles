@@ -1,0 +1,14 @@
+---
+
+- name: Ensure some packages
+  become: yes
+  become_user: root
+  apt: name={{ item }}
+  with_items:
+    - dconf-editor
+    - mint-themes
+    - mate-themes
+    - shutter
+
+- name: Import dconf.conf
+  shell: cat ~/dofiles/config/roles/mint-mate/files/dconf.conf | dconf load /

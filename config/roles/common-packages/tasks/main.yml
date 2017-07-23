@@ -22,7 +22,6 @@
     - python-pip
     - meld
     - stow
-    - shutter
     - inotify-tools
     - libpq-dev
     - nmap

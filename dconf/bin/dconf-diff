@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Dumps dconf entries and compares to config/roles/mint-mate/files/dconf.conf
+
+set -e
+
+dconf dump / > ~/tmp/dconf.conf
+
+meld ~/tmp/dconf.conf ~/dotfiles/config/roles/mint-mate/files/dconf.conf
+
+rm ~/tmp/dconf.conf

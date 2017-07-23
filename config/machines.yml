@@ -5,6 +5,6 @@
   roles:
     - common-packages
     # - postgresql-dev
-    - marco-wm
+    - mint-mate
     - git
     # - docker
