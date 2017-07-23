@@ -1,8 +1,19 @@
 #!/usr/bin/env bash
 
+set -e
+
+# Make sure ansible can become root if necessary
+if ! sudo -n /bin/true &> /dev/null ; then
+    echo "Authenticate for sudo first:"
+    sudo /bin/true
+fi
+
 if [ ! -x "/usr/bin/ansible" ]; then
     echo "Will install Ansible..."
     sudo /bin/bash -c "apt-add-repository -y ppa:ansible/ansible && apt-get update && apt-get install -y ansible"
 fi
 
+pushd .
+cd ~/dotfiles/config
 ansible-playbook --ask-vault-pass -i machines machines.yml --limit `hostname -f` --connection=local
+popd
