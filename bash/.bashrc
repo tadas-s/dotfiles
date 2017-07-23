@@ -152,3 +152,10 @@ if [ -f "/usr/local/bin/virtualenvwrapper.sh" ]; then
   source /usr/local/bin/virtualenvwrapper.sh
 fi
 
+# RVM
+# Install using: curl -sSL https://get.rvm.io | bash -s stable --ignore-dotfiles
+if [ -f "$HOME/.rvm/scripts/rvm" ]; then
+  export PATH="$PATH:$HOME/.rvm/bin"
+  [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+fi
+
