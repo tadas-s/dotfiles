@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+
+# TODO: pip install crudini
+
+dconf dump / | crudini --get --format=lines - | sort > ~/tmp/dconf.lines
+
+cat ~/dotfiles/config/roles/mint-mate/files/dconf.conf | crudini --get --format=lines - | sort > ~/tmp/dconf-dotfiles.lines
+
+meld ~/tmp/dconf.lines ~/tmp/dconf-dotfiles.lines
+
+rm ~/tmp/dconf.lines
+rm ~/tmp/dconf-dotfiles.lines
