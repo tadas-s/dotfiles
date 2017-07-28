@@ -159,3 +159,13 @@ if [ -f "$HOME/.rvm/scripts/rvm" ]; then
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 fi
 
+# Quick switch between /projects and /projects_nfs folders inside Vagrant VM
+function cwcd {
+  if pwd | grep -q -E "^/projects($|/)"; then
+    cd `pwd | sed -e"s/projects/projects_nfs/g"`
+  elif pwd | grep -q -E "^/projects_nfs($|/)"; then
+    cd `pwd | sed -e"s/projects_nfs/projects/g"`
+  else
+    cd /projects/carwow/
+  fi
+}
