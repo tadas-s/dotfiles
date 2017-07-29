@@ -159,6 +159,12 @@ if [ -f "$HOME/.rvm/scripts/rvm" ]; then
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 fi
 
+# NVM
+if [ -f "$HOME/.nvm/nvm.sh" ]; then
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+fi
+
 # Quick switch between /projects and /projects_nfs folders inside Vagrant VM
 function cwcd {
   if pwd | grep -q -E "^/projects($|/)"; then
