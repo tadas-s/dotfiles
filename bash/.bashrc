@@ -154,12 +154,26 @@ if [ -f "$HOME/.nvm/nvm.sh" ]; then
 fi
 
 # Quick switch between /projects and /projects_nfs folders inside Vagrant VM
-function cwcd {
-  if pwd | grep -q -E "^/projects($|/)"; then
-    cd `pwd | sed -e"s/projects/projects_nfs/g"`
-  elif pwd | grep -q -E "^/projects_nfs($|/)"; then
-    cd `pwd | sed -e"s/projects_nfs/projects/g"`
-  else
-    cd /projects/carwow/
-  fi
-}
+if [ "$USER" == "vagrant" ]; then
+  function cwcd {
+    if pwd | grep -q -E "^/projects($|/)"; then
+      cd `pwd | sed -e"s/projects/projects_nfs/g"`
+    elif pwd | grep -q -E "^/projects_nfs($|/)"; then
+      cd `pwd | sed -e"s/projects_nfs/projects/g"`
+    else
+      cd /projects/carwow/
+    fi
+  }
+
+  # cd to nfs mounted project folder
+  # TODO: bash completion for this
+  function c {
+    cd "/projects_nfs/carwow/$1"
+  }
+
+  # cd to rsync synced project folder
+  # TODO: bash completion for this
+  function x {
+    cd "/projects/carwow/$1"
+  }
+fi
