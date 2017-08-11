@@ -88,9 +88,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
@@ -128,16 +125,6 @@ GIT_PROMPT_ONLY_IN_REPO=1
 
 # Cows are lovely, but what ansible does with cowsay is bit much.
 export ANSIBLE_NOCOWS=1
-
-# Some aliases
-# TODO: move to .bash_aliases
-alias ve="vagrant exec"
-alias setclip="xclip -selection c"
-alias getclip="xclip -selection clipboard -o"
-
-if [ -d "${HOME}/vagrant_devbox" ]; then
-  alias vb="cd ${HOME}/vagrant_devbox && (vagrant ssh || (vagrant up && vagrant ssh))"
-fi
 
 # Moar colors
 if [ "${TERM}" == "xterm" ]; then
