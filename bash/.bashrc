@@ -153,6 +153,11 @@ if [ -f "$HOME/.nvm/nvm.sh" ]; then
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 fi
 
+# Rust compiler
+if [ -f "$HOME/.cargo/bin/rustc" ]; then
+  export PATH="$HOME/.cargo/bin:$PATH"
+fi
+
 # Quick switch between /projects and /projects_nfs folders inside Vagrant VM
 if [ "$USER" == "vagrant" ]; then
   function cwcd {
