@@ -182,3 +182,5 @@ if [ "$USER" == "vagrant" ]; then
     cd "/projects/carwow/$1"
   }
 fi
+
+export EDITOR=vim
