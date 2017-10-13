@@ -1,5 +1,7 @@
 .idea/
 .DS_Store
 .byebug_history
+Procfile.dev-web
+Procfile.dev-full
 
 
