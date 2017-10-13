@@ -1,0 +1,22 @@
+# ~/.tmuxinator/foo.yml
+
+name: carwow web
+root: /projects/carwow
+
+windows:
+  - research_site:
+    - cd research_site
+    - foreman start -f Procfile.dev-web
+  - quotes_site:
+    - cd quotes_site
+    - foreman start -f Procfile.dev-web
+  - performance_stats_service:
+    - cd performance_stats_service
+    - foreman start -f Procfile.dev-web
+  - dealers_site:
+    - cd dealers_site
+    - foreman start -f Procfile.dev-web
+  - admin:
+    - cd flatmin
+    - foreman start -f Procfile.dev-web
+
