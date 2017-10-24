@@ -19,4 +19,6 @@ windows:
   - admin:
     - cd flatmin
     - foreman start -f Procfile.dev-web
-
+  - notifier:
+    - cd notifier
+    - foreman start -f Procfile.dev-web
