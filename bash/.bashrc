@@ -184,3 +184,16 @@ if [ "$USER" == "vagrant" ]; then
 fi
 
 export EDITOR=vim
+
+# carwow country switcher
+function cuk {
+  export COUNTRY=uk
+}
+
+function cde {
+  export COUNTRY=de
+}
+
+if [ -z "${COUNTRY}" ]; then
+  cuk
+fi
