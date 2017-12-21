@@ -158,42 +158,4 @@ if [ -f "$HOME/.cargo/bin/rustc" ]; then
   export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
-# Quick switch between /projects and /projects_nfs folders inside Vagrant VM
-if [ "$USER" == "vagrant" ]; then
-  function cwcd {
-    if pwd | grep -q -E "^/projects($|/)"; then
-      cd `pwd | sed -e"s/projects/projects_nfs/g"`
-    elif pwd | grep -q -E "^/projects_nfs($|/)"; then
-      cd `pwd | sed -e"s/projects_nfs/projects/g"`
-    else
-      cd /projects/carwow/
-    fi
-  }
-
-  # cd to nfs mounted project folder
-  # TODO: bash completion for this
-  function c {
-    cd "/projects_nfs/carwow/$1"
-  }
-
-  # cd to rsync synced project folder
-  # TODO: bash completion for this
-  function x {
-    cd "/projects/carwow/$1"
-  }
-fi
-
 export EDITOR=vim
-
-# carwow country switcher
-function cuk {
-  export COUNTRY=uk
-}
-
-function cde {
-  export COUNTRY=de
-}
-
-if [ -z "${COUNTRY}" ]; then
-  cuk
-fi
