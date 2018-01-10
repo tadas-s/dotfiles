@@ -1,0 +1,9 @@
+[user]
+  email = tadas@yoyo.lt
+  name = Tadas Sasnauskas
+[core]
+  excludesfile = /Users/tsasnauskas/.gitignore
+  editor = vim
+[alias]
+  dc = diff --cached
+  d = diff
