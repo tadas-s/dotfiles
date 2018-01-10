@@ -117,6 +117,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Bash completion for mac os (╯°□°)╯︵ ┻━┻
+if [[ $(uname) == "Darwin" ]] && [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
 #
 # Git / bash integration
 #
@@ -159,3 +164,11 @@ if [ -f "$HOME/.cargo/bin/rustc" ]; then
 fi
 
 export EDITOR=vim
+
+# Local secret env variables
+if [ -f "$HOME/.env" ]; then
+  set -o allexport
+  source "$HOME/.env"
+  set +o allexport
+fi
+
