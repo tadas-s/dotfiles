@@ -7,3 +7,6 @@
 [alias]
   dc = diff --cached
   d = diff
+  amend = commit --amend
+[push]
+  default = current
