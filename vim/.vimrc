@@ -56,6 +56,7 @@ set laststatus=2
 set backspace=indent,eol,start
 set tabstop=2
 set nowrap
+set colorcolumn=80
 
 set autoindent
 filetype plugin indent on " Enable filetype-specific indenting and plugins
