@@ -91,3 +91,7 @@ colorscheme solarized
 " Markdown plugin config
 let g:vim_markdown_folding_disabled = 1
 
+" gitcommit type settings
+au FileType gitcommit set tw=80
+au FileType gitcommit set spell
+
