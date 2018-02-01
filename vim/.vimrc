@@ -31,10 +31,13 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'
 Plugin 'hewo/vim-colorscheme-deepsea'
-Plugin 'dag/vim2hs'
+"Plugin 'dag/vim2hs'
 Plugin 'rust-lang/rust.vim'
-Plugin 'elixir-lang/vim-elixir'
+" Plugin 'elixir-lang/vim-elixir'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+
 " Plugin 'wikitopian/hardmode' " one day, but not today...
 
 " All of your Plugins must be added before the following line
@@ -84,4 +87,7 @@ endif
 syntax enable
 set background=dark
 colorscheme solarized
+
+" Markdown plugin config
+let g:vim_markdown_folding_disabled = 1
 
