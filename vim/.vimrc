@@ -95,3 +95,6 @@ let g:vim_markdown_folding_disabled = 1
 au FileType gitcommit set tw=80
 au FileType gitcommit set spell
 
+" ... fat fingers fix
+command! Wq wq
+
