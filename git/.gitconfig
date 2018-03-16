@@ -8,5 +8,6 @@
   dc = diff --cached
   d = diff
   amend = commit --amend
+  amend-to = "!f() { SHA=`git rev-parse \"$1\"`; git commit --fixup \"$SHA\" && GIT_SEQUENCE_EDITOR=true git rebase --interactive --autosquash \"$SHA^\"; }; f"
 [push]
   default = current
