@@ -37,6 +37,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'ekalinin/Dockerfile.vim'
 
 " Plugin 'wikitopian/hardmode' " one day, but not today...
 
