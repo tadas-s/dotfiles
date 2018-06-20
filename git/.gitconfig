@@ -9,5 +9,6 @@
   d = diff
   amend = commit --amend
   amend-to = "!f() { SHA=`git rev-parse \"$1\"`; git commit --fixup \"$SHA\" && GIT_SEQUENCE_EDITOR=true git rebase --interactive --autosquash \"$SHA^\"; }; f"
+  ls-untracked = "ls-files --others --exclude-standard"
 [push]
   default = current
