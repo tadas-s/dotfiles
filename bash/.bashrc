@@ -140,7 +140,8 @@ fi
 if [ -f "/usr/local/bin/virtualenvwrapper.sh" ]; then
   export WORKON_HOME=$HOME/.virtualenvs
   export PROJECT_HOME=$HOME/src
-  export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages -p python3.4'
+  export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages -p python3'
+  export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
   source /usr/local/bin/virtualenvwrapper.sh
 fi
 
@@ -171,4 +172,8 @@ if [ -f "$HOME/.env" ]; then
   source "$HOME/.env"
   set +o allexport
 fi
+
+# KiCad's libraries from github instead of stale package provided ones
+export KIGITHUB="https://github.com/KiCad"
+export KICAD_PATH="${HOME}/.local/share/kicad-library"
 
