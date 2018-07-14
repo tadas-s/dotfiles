@@ -8,14 +8,14 @@
 - name: Add Docker deb repository
   become: yes
   become_user: root
-  apt_repository: repo='deb https://apt.dockerproject.org/repo ubuntu-trusty main' state=present filename='docker'
+  apt_repository: repo='deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable' state=present filename='docker'
 
 - name: Install Docker
   become: yes
   become_user: root
   apt: name={{ item }}
   with_items:
-    - docker-engine
+    - docker-ce
 
 - name: Install docker-compose
   become: yes
