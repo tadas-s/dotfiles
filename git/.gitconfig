@@ -2,7 +2,7 @@
   email = tadas@yoyo.lt
   name = Tadas Sasnauskas
 [core]
-  excludesfile = /Users/tsasnauskas/.gitignore
+  excludesfile = ~/.gitignore
   editor = vim
 [alias]
   dc = diff --cached
