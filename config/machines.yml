@@ -4,7 +4,4 @@
   hosts: all
   roles:
     - common-packages
-    # - postgresql-dev
-    - mint-mate
-    - git
-    # - docker
+    - docker
