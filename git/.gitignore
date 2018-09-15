@@ -8,3 +8,5 @@ Procfile.dev-full
 ajcore.*
 target/
 
+.Rhistory
+
