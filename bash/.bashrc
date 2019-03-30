@@ -173,7 +173,3 @@ if [ -f "$HOME/.env" ]; then
   set +o allexport
 fi
 
-# KiCad's libraries from github instead of stale package provided ones
-export KIGITHUB="https://github.com/KiCad"
-export KICAD_PATH="${HOME}/.local/share/kicad-library"
-
