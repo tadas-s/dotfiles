@@ -145,6 +145,11 @@ if [ -f "/usr/local/bin/virtualenvwrapper.sh" ]; then
   source /usr/local/bin/virtualenvwrapper.sh
 fi
 
+# mac os pip installed things.. (sigh)
+if [ -d "${HOME}/Library/Python/3.7/bin" ]; then
+  PATH="${HOME}/Library/Python/3.7/bin:${PATH}"
+fi
+
 # RVM
 # Install using: curl -sSL https://get.rvm.io | bash -s stable --ignore-dotfiles
 if [ -f "$HOME/.rvm/scripts/rvm" ]; then
@@ -173,3 +178,5 @@ if [ -f "$HOME/.env" ]; then
   set +o allexport
 fi
 
+# pyenv, mac os only
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
