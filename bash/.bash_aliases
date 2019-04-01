@@ -7,4 +7,4 @@ alias dcu="docker-compose up --build -d"
 alias dcl="docker-compose logs -f"
 alias dcps="docker-compose ps"
 alias dcpu="docker-compose pull && docker-compose up -d"
-
+alias b="docker-compose build --parallel"
