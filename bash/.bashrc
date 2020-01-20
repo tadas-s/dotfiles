@@ -180,3 +180,7 @@ fi
 
 # pyenv, mac os only
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+# oh fuck off Apple
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
