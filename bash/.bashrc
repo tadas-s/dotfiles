@@ -137,12 +137,12 @@ if [ "${TERM}" == "xterm" ]; then
 fi
 
 # Virtualenv, if installed/being used
-if [ -f "/usr/local/bin/virtualenvwrapper.sh" ]; then
+if [ -f "/usr/share/virtualenvwrapper/virtualenvwrapper.sh" ]; then
   export WORKON_HOME=$HOME/.virtualenvs
   export PROJECT_HOME=$HOME/src
   export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages -p python3'
   export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-  source /usr/local/bin/virtualenvwrapper.sh
+  source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 fi
 
 # mac os pip installed things.. (sigh)
