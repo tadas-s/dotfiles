@@ -12,3 +12,5 @@
   ls-untracked = "ls-files --others --exclude-standard"
 [push]
   default = current
+[commit]
+  verbose = true
