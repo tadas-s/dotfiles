@@ -81,6 +81,14 @@ augroup END
 " Airline config
 let g:airline_theme='luna'
 
+" Force to use underline for spell check results
+augroup SpellUnderline
+  autocmd!
+  autocmd ColorScheme *
+        \ highlight SpellBad
+        \ cterm=Underline
+augroup END
+
 " Color theme
 if $COLORTERM == 'gnome-terminal'
   set t_Co=256
