@@ -17,3 +17,7 @@ docker-compose.override.yml.bak
 .vscode
 *.swp
 
+.rakeTasks
+
+*.iml
+
