@@ -14,4 +14,6 @@ target/
 docker-compose.override.yml.bak
 .rakeTasks
 .generators
+.vscode
+*.swp
 
