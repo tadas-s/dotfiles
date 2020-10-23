@@ -157,6 +157,13 @@ if [ -f "$HOME/.rvm/scripts/rvm" ]; then
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 fi
 
+# If the current working directroy has .ruby-version - use it.
+# Mostly for IDEs that start shell immediately in the project folder.
+# In that case rvm cd hooks do not really "kick in" and switch the version.
+if [ "function" = $(type -t rvm) ] && [ -f ".ruby-version" ]; then
+  rvm use
+fi
+
 # NVM
 if [ -f "$HOME/.nvm/nvm.sh" ]; then
   export NVM_DIR="$HOME/.nvm"
