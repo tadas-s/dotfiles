@@ -161,7 +161,7 @@ fi
 # Mostly for IDEs that start shell immediately in the project folder.
 # In that case rvm cd hooks do not really "kick in" and switch the version.
 if [ "function" = $(type -t rvm) ] && [ -f ".ruby-version" ]; then
-  rvm use
+  rvm use --quiet
 fi
 
 # NVM
