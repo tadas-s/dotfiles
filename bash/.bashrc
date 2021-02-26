@@ -117,11 +117,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Bash completion for mac os (╯°□°)╯︵ ┻━┻
-if [[ $(uname) == "Darwin" ]] && [ -f $(brew --prefix)/etc/bash_completion ]; then
-  . $(brew --prefix)/etc/bash_completion
-fi
-
 #
 # Git / bash integration
 #
@@ -145,11 +140,6 @@ if [ -f "/usr/share/virtualenvwrapper/virtualenvwrapper.sh" ]; then
   source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 fi
 
-# mac os pip installed things.. (sigh)
-if [ -d "${HOME}/Library/Python/3.7/bin" ]; then
-  PATH="${HOME}/Library/Python/3.7/bin:${PATH}"
-fi
-
 # RVM
 # Install using: curl -sSL https://get.rvm.io | bash -s stable --ignore-dotfiles
 if [ -f "$HOME/.rvm/scripts/rvm" ]; then
@@ -157,7 +147,7 @@ if [ -f "$HOME/.rvm/scripts/rvm" ]; then
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 fi
 
-# If the current working directroy has .ruby-version - use it.
+# If the current working directory has .ruby-version - use it.
 # Mostly for IDEs that start shell immediately in the project folder.
 # In that case rvm cd hooks do not really "kick in" and switch the version.
 if [ "function" = $(type -t rvm) ] && [ -f ".ruby-version" ]; then
@@ -184,10 +174,3 @@ if [ -f "$HOME/.env" ]; then
   source "$HOME/.env"
   set +o allexport
 fi
-
-# pyenv, mac os only
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-
-# oh fuck off Apple
-export BASH_SILENCE_DEPRECATION_WARNING=1
-
