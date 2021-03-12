@@ -150,7 +150,7 @@ fi
 # If the current working directory has .ruby-version - use it.
 # Mostly for IDEs that start shell immediately in the project folder.
 # In that case rvm cd hooks do not really "kick in" and switch the version.
-if [ "function" = $(type -t rvm) ] && [ -f ".ruby-version" ]; then
+if [ "function" == "$(type -t rvm)" ] && [ -f ".ruby-version" ]; then
   rvm use --quiet
 fi
 
