@@ -166,6 +166,12 @@ if [ -f "$HOME/.cargo/bin/rustc" ]; then
   export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
+# golang
+if [ -d "$HOME/.local/go" ]; then
+  export GOPATH="$HOME/.local/go"
+  export PATH="$PATH:$HOME/.local/go/bin"
+fi
+
 export EDITOR=vim
 
 # Local secret env variables
