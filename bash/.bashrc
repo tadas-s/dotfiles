@@ -180,3 +180,7 @@ if [ -f "$HOME/.env" ]; then
   source "$HOME/.env"
   set +o allexport
 fi
+
+if [ -x "/usr/bin/direnv" ]; then
+  eval "$(direnv hook bash)"
+fi
