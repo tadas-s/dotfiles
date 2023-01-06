@@ -135,7 +135,7 @@ fi
 if [ -f "/usr/share/virtualenvwrapper/virtualenvwrapper.sh" ]; then
   export WORKON_HOME=$HOME/.virtualenvs
   export PROJECT_HOME=$HOME/src
-  export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages -p python3'
+  export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='-p python3'
   export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
   source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 fi
