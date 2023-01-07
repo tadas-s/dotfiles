@@ -132,12 +132,10 @@ if [ "${TERM}" == "xterm" ]; then
 fi
 
 # Virtualenv, if installed/being used
-if [ -f "/usr/share/virtualenvwrapper/virtualenvwrapper.sh" ]; then
+if [ -f "/usr/bin/virtualenvwrapper.sh" ]; then
   export WORKON_HOME=$HOME/.virtualenvs
   export PROJECT_HOME=$HOME/src
-  export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='-p python3'
-  export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-  source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+  source /usr/bin/virtualenvwrapper.sh
 fi
 
 # RVM
