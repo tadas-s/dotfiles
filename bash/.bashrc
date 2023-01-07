@@ -127,9 +127,9 @@ GIT_PROMPT_ONLY_IN_REPO=1
 export ANSIBLE_NOCOWS=1
 
 # Moar colors
-if [ "${TERM}" == "xterm" ]; then
-  export TERM=xterm-256color
-fi
+#if [ "${TERM}" == "xterm" ]; then
+#  export TERM=xterm-256color
+#fi
 
 # Virtualenv, if installed/being used
 if [ -f "/usr/bin/virtualenvwrapper.sh" ]; then
