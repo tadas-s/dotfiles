@@ -160,8 +160,8 @@ if [ -f "$HOME/.nvm/nvm.sh" ]; then
 fi
 
 # Rust compiler
-if [ -f "$HOME/.cargo/bin/rustc" ]; then
-  export PATH="$HOME/.cargo/bin:$PATH"
+if [ -f "$HOME/.cargo/env" ]; then
+  source "$HOME/.cargo/env"
 fi
 
 # golang
