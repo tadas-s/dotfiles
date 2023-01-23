@@ -80,6 +80,7 @@ augroup END
 
 " Airline config
 let g:airline_theme='luna'
+let g:airline_powerline_fonts=1
 
 " Force to use underline for spell check results
 augroup SpellUnderline
