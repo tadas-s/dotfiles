@@ -30,6 +30,7 @@ colors:
 font:
   normal:
     family: 'Ubuntu Mono derivative Powerline'
+  size: 12.0
 
 window:
   decorations: none
