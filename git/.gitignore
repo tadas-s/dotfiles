@@ -19,3 +19,5 @@ docker-compose.override.yml.bak
 
 *.iml
 
+.ruby-gemset
+
