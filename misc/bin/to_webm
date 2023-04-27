@@ -9,7 +9,7 @@ fi
 
 name=$(basename "${1%.*}")
 
-ffmpeg  -i $1  -b:v 0  -crf 30  -pass 1  -an -f webm -y /dev/null
-ffmpeg  -i $1  -b:v 0  -crf 30  -pass 2  ${name}.webm
+ffmpeg  -i $1  -b:v 0  -crf 40  -pass 1  -an -f webm -y /dev/null
+ffmpeg  -i $1  -b:v 0  -crf 40  -pass 2  ${name}.webm
 rm -f ffmpeg2pass-0.log
 
