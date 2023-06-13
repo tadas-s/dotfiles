@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -e
+
+if ! [[ -f ${1} ]]; then
+  echo "'${1}' does not seem to be a regular file"
+  exit 1
+fi
+
+name=$(basename "${1%.*}")
+ext="${1##*.}"
+out=$(mktemp "/tmp/XXXXXXXX.${ext}")
+
+ffmpeg -i $1 -i "${HOME}/.local/elevator_jazz.mp3" \
+       -map 0:v -map 1:a -c:v copy -shortest \
+			 -y ${out}
+
+mv ${out} $1
+
