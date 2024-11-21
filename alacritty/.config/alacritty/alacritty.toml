@@ -46,7 +46,7 @@ mods = "None"
 action = "ToggleFullscreen"
 key = "F11"
 
-[shell]
+[terminal.shell]
 args = ["new-session", "-A", "-s", "alacritty-main"]
 program = "/usr/bin/tmux"
 
@@ -56,3 +56,5 @@ decorations = "none"
 [window.padding]
 x = 5
 y = 5
+
+[terminal]
