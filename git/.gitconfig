@@ -4,6 +4,11 @@
 [core]
   excludesfile = ~/.gitignore
   editor = vim
+[diff]
+  algorithm = histogram
+  colorMoved = plain
+  mnemonicPrefix = true
+  renames = true
 [alias]
   dc = diff --cached
   d = diff
