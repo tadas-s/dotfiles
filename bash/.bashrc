@@ -178,7 +178,7 @@ fi
 
 # golang
 if [ -d "$HOME/.local/go" ]; then
-  export GOPATH="$HOME/.local/go"
+  export GOROOT="$HOME/.local/go"
   export PATH="$PATH:$HOME/.local/go/bin"
 fi
 
