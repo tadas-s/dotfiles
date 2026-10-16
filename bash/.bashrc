@@ -194,3 +194,7 @@ fi
 if [ -x "/usr/bin/direnv" ]; then
   eval "$(direnv hook bash)"
 fi
+
+if [ -x "/usr/bin/virsh" ]; then
+  export LIBVIRT_DEFAULT_URI="qemu:///system"
+fi
